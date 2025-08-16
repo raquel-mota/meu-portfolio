@@ -2,16 +2,15 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home - Portfólio Raquel</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css?v=3">
 </head>
 
 <body>
     <header>
         <div class="header-container">
-            <h1>Raquel de Jesus Mota</h1>
             <nav>
                 <a href="index.html">Home</a>
                 <a href="formacao.html">Itinerário Formativo</a>
@@ -22,37 +21,54 @@
         </div>
     </header>
 
-    <div class="menu-separator"></div>
+    <section class="intro">
+        <p class="intro-small">Meu nome é</p>
+        <h2 class="intro-name">Raquel</h2>
+        <p class="intro-sub">Bem-vindo(a) ao meu portfólio!</p>
+    </section>
 
     <main>
-        <section class="bem-vindo">
-            <h2>Bem-vindo(a) ao meu portfólio</h2>
-        </section>
-
         <section class="sobre-container">
             <div class="sobre-imagem">
-                <img src="assets/img/foto.jpg" alt="Foto de Raquel de Jesus Mota">
+                <div class="carrossel" id="carrossel-sobremim">
+                    <div class="carrossel-item active">
+                        <img src="assets/img/carrossel_sobremim1.jpg" alt="Imagem 1 sobre mim">
+                    </div>
+                    <div class="carrossel-item">
+                        <img src="assets/img/carrossel_sobremim2.png" alt="Imagem 2 sobre mim">
+                    </div>
+                    <div class="carrossel-item">
+                        <img src="assets/img/carrossel_sobremim3.jpg" alt="Imagem 3 sobre mim">
+                    </div>
+
+                    <button class="carrossel-btn prev" aria-label="Imagem anterior">&#10094;</button>
+                    <button class="carrossel-btn next" aria-label="Próxima imagem">&#10095;</button>
+                </div>
             </div>
+
             <div class="sobre-texto">
                 <h3>Sobre Mim</h3>
                 <p>Meu nome é <strong>Raquel de Jesus Mota</strong>, tenho 27 anos e sou natural de <strong>Uberaba,
-                    MG</strong>.</p>
+                        MG</strong>.</p>
                 <p>
                     Atualmente, curso <strong>Superior de Tecnologia em Análise e Desenvolvimento de Sistemas</strong>
-                    no <strong>Instituto Federal do Triângulo Mineiro – Campus Uberaba Parque Tecnológico (UPT)</strong>.
+                    no <strong>Instituto Federal do Triângulo Mineiro – Campus Uberaba Parque Tecnológico
+                        (UPT)</strong>.
                 </p>
                 <p>
                     Meu primeiro contato mais aprofundado com programação ocorreu durante o curso, e desde então tenho
-                    me dedicado ao aprendizado e prática de diversas linguagens. As áreas que mais despertam meu interesse
+                    me dedicado ao aprendizado e prática de diversas linguagens. As áreas que mais despertam meu
+                    interesse
                     são <strong>Ciência de Dados</strong> e <strong>Inteligência Artificial</strong>.
                 </p>
                 <p>
-                    Possuo experiência e utilizo atualmente linguagens de programação como <strong>C</strong>, 
+                    Possuo experiência e utilizo atualmente linguagens de programação como <strong>C</strong>,
                     <strong>Java</strong>, <strong>JavaScript</strong>, <strong>PHP</strong> e <strong>Python</strong>.
                 </p>
                 <p>
                     Além da área tecnológica, tenho forte ligação com a música. Estudei violão e concluí o curso de
-                    <strong>Educação Básica Musical</strong> no <strong>Conservatório Estadual de Música Renato Frateschi</strong>, 
+                    <strong>Educação Básica Musical</strong> no <strong>Conservatório Estadual de Música Renato
+                        Frateschi</strong>,
                     também em Uberaba.
                 </p>
             </div>
@@ -62,6 +78,10 @@
     <footer>
         <p>© 2025 Raquel de Jesus Mota</p>
     </footer>
+
+    <script src="assets/scripts/carrossel.js"></script>
+
+
 </body>
 
 </html>

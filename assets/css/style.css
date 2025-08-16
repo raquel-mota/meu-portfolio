@@ -1,257 +1,98 @@
-/* Reset básico */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* === RESET PADRÃO === */
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-  font-family: Arial, sans-serif;
-  background-color: #ffffff;
-  color: #000000;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #000; /* Fundo preto */
+  color: #fff;            /* Texto branco */
   line-height: 1.6;
 }
 
-/* Cabeçalho */
+/* === CABEÇALHO === */
 header {
-  background-color: #000000;
-  color: #ffffff;
-  padding: 20px 0;
+  background: #111;
+  padding: 15px 0;
+  border-bottom: 2px solid #fff;
 }
-
 .header-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
-}
-
-header h1 {
-  font-size: 1.5rem;
-}
-
-nav a {
-  color: #ffffff;
-  margin-left: 15px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-/* Separador do menu */
-.menu-separator {
-  height: 4px;
-  background-color: #ffffff;
-}
-
-/* Bem-vindo */
-.bem-vindo {
-  background-color: #000000;
-  color: #ffffff;
-  text-align: center;
-  padding: 20px 0;
-}
-
-.bem-vindo h2 {
-  font-size: 1.8rem;
-}
-
-/* Sobre Mim */
-.sobre-container {
+  padding: 0 24px;
   display: flex;
+  justify-content: flex-end; /* menu à direita */
   align-items: center;
-  justify-content: center;
-  max-width: 1000px;
-  margin: 40px auto;
-  gap: 20px;
-  padding: 0 20px;
 }
-
-.sobre-imagem img {
-  max-width: 280px;
-  border-radius: 10px;
-  object-fit: cover;
-}
-
-.sobre-texto {
-  flex: 1;
-  padding-left: 70px; /* desloca mais para a direita */
-}
-
-.sobre-texto h3 {
-  margin-bottom: 10px;
-  font-size: 1.5rem;
-}
-
-/* Rodapé */
-footer {
-  background-color: #000000;
-  color: #ffffff;
-  text-align: center;
-  padding: 15px;
-  margin-top: 40px;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-  .header-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  nav {
-    margin-top: 10px;
-  }
-
-  nav a {
-    display: inline-block;
-    margin: 5px 10px;
-  }
-
-  .sobre-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .sobre-texto {
-    padding-left: 0; /* remove deslocamento no mobile */
-  }
-
-  .sobre-imagem img {
-    max-width: 200px;
-  }
-}
-/* Reset básico */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  background-color: #ffffff;
-  color: #000000;
-  line-height: 1.6;
-}
-
-/* Cabeçalho */
-header {
-  background-color: #000000;
-  color: #ffffff;
-  padding: 20px 0;
-}
-
-.header-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-header h1 {
-  font-size: 1.5rem;
-}
-
+nav { display: flex; gap: 20px; flex-wrap: wrap; }
 nav a {
-  color: #ffffff;
-  margin-left: 15px;
-  text-decoration: none;
-  font-weight: bold;
+  color: #fff; text-decoration: none; font-weight: bold; transition: color .3s;
 }
+nav a:hover { color: #f39c12; }
 
-nav a:hover {
-  text-decoration: underline;
-}
+/* === INTRO === */
+.intro { text-align: center; padding: 40px 20px; }
+.intro-small { font-size: 18px; color: #aaa; }
+.intro-name  { font-size: 32px; margin: 10px 0; color: #f39c12; }
+.intro-sub   { font-size: 20px; color: #ddd; }
 
-/* Separador do menu */
-.menu-separator {
-  background-color: #ffffff;
-  height: 4px;
-  width: 100%;
-}
-
-/* Bem-vindo */
-.bem-vindo {
-  text-align: center;
-  background-color: #000000;
-  color: #ffffff;
-  padding: 20px;
-}
-
-.bem-vindo h2 {
-  font-size: 2rem;
-  font-weight: normal;
-}
-
-/* Sobre Mim */
+/* === CONTEÚDO PRINCIPAL === */
 .sobre-container {
   display: flex;
   align-items: flex-start;
-  max-width: 1000px;
-  margin: 40px auto;
-  gap: 20px;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 50px 10%;
 }
 
-.sobre-imagem img {
-  width: 300px;
-  height: auto;
+/* === CARROSSEL === */
+.carrossel {
+  position: relative;
+  width: 360px;       /* largura fixa confortável */
+  max-width: 100%;
+  overflow: hidden;
   border-radius: 10px;
+  background: #111;
+  border: 1px solid #333;
 }
+.carrossel-item { display: none; }
+.carrossel-item.active { display: block; }
+.carrossel img { width: 100%; height: auto; display: block; }
 
+.carrossel-btn {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  background: rgba(0,0,0,0.6); color: #fff; border: none;
+  font-size: 24px; padding: 10px; cursor: pointer; border-radius: 50%;
+  transition: background .3s;
+}
+.carrossel-btn:hover { background: rgba(0,0,0,0.9); }
+.carrossel-btn.prev { left: 10px; }
+.carrossel-btn.next { right: 10px; }
+
+/* === TEXTO SOBRE MIM === */
 .sobre-texto {
-  flex: 1;
-  padding-left: 90px; /* desloca mais para a direita */
+  flex: 1; max-width: 640px;
+  margin-left: 60px;              /* empurra mais para a direita */
 }
+.sobre-texto h3 { font-size: 26px; margin-bottom: 15px; color: #f39c12; }
+.sobre-texto p  { margin-bottom: 15px; text-align: justify; }
 
-.sobre-texto h3 {
-  font-size: 1.8rem;
-  margin-bottom: 15px;
-}
-
-.sobre-texto p {
-  margin-bottom: 15px;
-}
-
-/* Rodapé */
+/* === RODAPÉ === */
 footer {
-  background-color: #000000;
-  color: #ffffff;
-  text-align: center;
-  padding: 15px;
-  margin-top: 40px;
+  text-align: center; padding: 20px; background: #111;
+  border-top: 2px solid #fff; margin-top: 40px;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-  .header-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  nav {
-    margin-top: 10px;
-  }
-
-  nav a {
-    display: inline-block;
-    margin: 5px 10px;
-  }
-
-  .sobre-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .sobre-texto {
-    padding-left: 0;
-  }
+/* === RESPONSIVIDADE === */
+@media (max-width: 1024px) {
+  .sobre-container { gap: 24px; padding: 40px 6%; }
+  .sobre-texto { margin-left: 40px; }
+}
+@media (max-width: 860px) {
+  .sobre-container { flex-direction: column; align-items: center; text-align: center; }
+  .sobre-texto { margin-left: 0; max-width: 720px; text-align: left; }
+  .carrossel { width: 90%; }
+}
+@media (max-width: 480px) {
+  .intro-name { font-size: 24px; }
+  .intro-sub  { font-size: 16px; }
+  .sobre-texto h3 { font-size: 22px; }
 }
