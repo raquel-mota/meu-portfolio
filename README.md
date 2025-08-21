@@ -2,8 +2,9 @@
 
 Bem-vindo(a) ao meu portfólio! 🚀  
 Este repositório contém meu site pessoal, onde apresento minha trajetória, interesses e projetos.  
+> ⚠️ Em construção!  
 
-⚠️ **Status:** Em construção 🚧
+🔗 **Acesse aqui:** [raquelmota.github.io/meu-portfolio](https://raquelmota.github.io/meu-portfolio)
 
 ## 👩‍💻 Sobre Mim
 Meu nome é **Raquel de Jesus Mota**, tenho 27 anos e sou natural de **Uberaba, MG**.  
