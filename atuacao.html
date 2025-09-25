@@ -4,45 +4,61 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Atuação Profissional - Portfólio Raquel</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
-<body>
-  <header>
-    <div class="header-container">
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="formacao.html">Itinerário Formativo</a>
-        <a href="atuacao.html">Atuação Profissional</a>
-        <a href="projetos.html">Projetos</a>
-        <a href="pessoal.html">Pessoal</a>
-      </nav>
+<body class="bg-black text-white">
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-light">
+    <div class="container">
+      <a class="navbar-brand text-warning fw-bold" href="index.html">Portfólio Raquel</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="formacao.html">Itinerário Formativo</a></li>
+          <li class="nav-item"><a class="nav-link active" href="atuacao.html">Atuação Profissional</a></li>
+          <li class="nav-item"><a class="nav-link" href="projetos.html">Projetos</a></li>
+          <li class="nav-item"><a class="nav-link" href="pessoal.html">Pessoal</a></li>
+          <li class="nav-item"><a class="nav-link" href="turma.html">Turma</a></li>
+        </ul>
+      </div>
     </div>
-  </header>
+  </nav>
 
-  <main>
-    <section class="conteudo-pagina section-div">
-      <h3>Experiência Atual</h3>
-      <p>
-        Atualmente, não atuo profissionalmente na área de tecnologia.  
-        No entanto, tenho dedicado meu tempo a estudos e projetos acadêmicos 
-        que fortalecem minha base técnica e me preparam para futuras oportunidades.
-      </p>
-    </section>
+  <!-- CONTEÚDO -->
+  <main class="container my-5">
+    <div class="card bg-dark text-white shadow mb-4">
+      <div class="card-body">
+        <h3 class="text-warning">Experiência Atual</h3>
+        <p>
+          Atualmente, não atuo profissionalmente na área de tecnologia.
+          No entanto, tenho dedicado meu tempo a estudos e projetos acadêmicos
+          que fortalecem minha base técnica e me preparam para futuras oportunidades.
+        </p>
+      </div>
+    </div>
 
-    <section class="conteudo-pagina section-div">
-      <h3>Áreas de Interesse</h3>
-      <p>Tenho forte interesse em duas áreas principais que impactam diretamente o mundo atual:</p>
-      <ul>
-        <li><strong>Ciência de Dados</strong>: análise de grandes volumes de dados, extração de insights 
-            e apoio à tomada de decisão em setores como saúde, economia e educação.</li>
-        <li><strong>Inteligência Artificial</strong>: criação de soluções inovadoras que envolvem 
-            aprendizado de máquina, automação de processos e novas formas de interação homem-máquina.</li>
-      </ul>
-    </section>
+    <div class="card bg-dark text-white shadow">
+      <div class="card-body">
+        <h3 class="text-warning">Áreas de Interesse</h3>
+        <ul>
+          <li><strong>Ciência de Dados</strong>: análise de grandes volumes de dados, extração de insights e apoio à tomada de decisão.</li>
+          <li><strong>Inteligência Artificial</strong>: aprendizado de máquina, automação e interação homem-máquina.</li>
+        </ul>
+      </div>
+    </div>
   </main>
 
-  <footer>
-    <p>© 2025 Raquel de Jesus Mota</p>
+  <!-- FOOTER -->
+  <footer class="bg-dark text-center text-secondary py-3 border-top border-light">
+    <p class="mb-0">© 2025 Raquel de Jesus Mota</p>
   </footer>
+
 </body>
 </html>

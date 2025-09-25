@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Turma - Portfólio Raquel</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body class="bg-black text-white">
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-light">
+    <div class="container">
+      <a class="navbar-brand text-warning fw-bold" href="index.html">Portfólio Raquel</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="formacao.html">Itinerário Formativo</a></li>
+          <li class="nav-item"><a class="nav-link" href="atuacao.html">Atuação Profissional</a></li>
+          <li class="nav-item"><a class="nav-link" href="projetos.html">Projetos</a></li>
+          <li class="nav-item"><a class="nav-link" href="pessoal.html">Pessoal</a></li>
+          <li class="nav-item"><a class="nav-link active" href="turma.html">Turma</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- TÍTULO -->
+  <header class="text-center py-5">
+    <h2 class="text-warning fw-bold">Turma de Tecnologias para Interfaces</h2>
+    <p class="fs-5 text-secondary">Conheça os estudantes da nossa turma</p>
+  </header>
+
+  <!-- CARROSSEL DE FOTOS -->
+  <div id="carouselTurma" class="carousel slide container mb-5" data-bs-ride="carousel">
+    <div class="carousel-inner rounded shadow">
+      <div class="carousel-item active">
+        <img src="assets/img/turma1.jpg" class="d-block w-100" alt="Foto da turma 1">
+      </div>
+      <div class="carousel-item">
+        <img src="assets/img/turma2.jpg" class="d-block w-100" alt="Foto da turma 2">
+      </div>
+      <div class="carousel-item">
+        <img src="assets/img/turma3.jpg" class="d-block w-100" alt="Foto da turma 3">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselTurma" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselTurma" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+
+  <!-- LISTA DE ALUNOS VIA JSON -->
+  <main class="container my-5">
+    <h3 class="text-warning mb-4">Lista de Estudantes</h3>
+    <div id="listaAlunos" class="row g-4"></div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-dark text-center text-secondary py-3 border-top border-light">
+    <p class="mb-0">© 2025 Raquel de Jesus Mota</p>
+  </footer>
+
+  <!-- SCRIPT PARA CARREGAR JSON -->
+  <script>
+    fetch("turma.json")
+      .then(res => res.json())
+      .then(dados => {
+        let lista = document.getElementById("listaAlunos");
+        dados.forEach(aluno => {
+          lista.innerHTML += `
+            <div class="col-md-4">
+              <div class="card bg-dark text-white shadow h-100">
+                <div class="card-body">
+                  <h5 class="card-title text-warning">${aluno.nome}</h5>
+                  <p class="card-text">${aluno.email}</p>
+                </div>
+              </div>
+            </div>`;
+        });
+      });
+  </script>
+
+</body>
+</html>
