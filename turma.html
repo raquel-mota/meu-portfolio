@@ -31,13 +31,12 @@
     </div>
   </nav>
 
-  <!-- TÍTULO -->
+  <!-- CONTEÚDO -->
   <header class="text-center py-5">
     <h2 class="text-warning fw-bold">Turma de Tecnologias para Interfaces</h2>
     <p class="fs-5 text-secondary">Conheça os estudantes da nossa turma</p>
   </header>
 
-  <!-- CARROSSEL DE FOTOS -->
   <div id="carouselTurma" class="carousel slide container mb-5" data-bs-ride="carousel">
     <div class="carousel-inner rounded shadow">
       <div class="carousel-item active">
@@ -58,9 +57,13 @@
     </button>
   </div>
 
-  <!-- LISTA DE ALUNOS VIA JSON -->
   <main class="container my-5">
     <h3 class="text-warning mb-4">Lista de Estudantes</h3>
+
+    <div class="mb-4">
+      <input type="text" id="busca" class="form-control" placeholder="🔍 Buscar aluno pelo nome...">
+    </div>
+
     <div id="listaAlunos" class="row g-4"></div>
   </main>
 
@@ -69,25 +72,7 @@
     <p class="mb-0">© 2025 Raquel de Jesus Mota</p>
   </footer>
 
-  <!-- SCRIPT PARA CARREGAR JSON -->
-  <script>
-    fetch("turma.json")
-      .then(res => res.json())
-      .then(dados => {
-        let lista = document.getElementById("listaAlunos");
-        dados.forEach(aluno => {
-          lista.innerHTML += `
-            <div class="col-md-4">
-              <div class="card bg-dark text-white shadow h-100">
-                <div class="card-body">
-                  <h5 class="card-title text-warning">${aluno.nome}</h5>
-                  <p class="card-text">${aluno.email}</p>
-                </div>
-              </div>
-            </div>`;
-        });
-      });
-  </script>
-
+  <!-- SCRIPT EXTERNO -->
+  <script src="assets/scripts/turma.js"></script>
 </body>
 </html>
