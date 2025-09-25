@@ -1,5 +1,3 @@
-// assets/scripts/carrossel.js
-
 let indiceAtual = 0;
 const itens = document.querySelectorAll(".carrossel-item");
 const total = itens.length;

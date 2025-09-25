@@ -31,7 +31,6 @@ function renderizarAlunos(lista) {
   });
 }
 
-// Filtro de busca
 document.addEventListener("DOMContentLoaded", () => {
   const busca = document.getElementById("busca");
   if (busca) {
