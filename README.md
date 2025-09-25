@@ -40,6 +40,7 @@ Essas áreas vêm transformando o mundo atual, desde a forma como lidamos com gr
 ┣ 📜 projetos.html
 ┣ 📜 turma.html
 ┗ 📜 README.md
+```
 
 ## 📬 Contato
 - 📧 **E-mail:** raquelmota.dev@gmail.com  
