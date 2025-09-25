@@ -20,18 +20,24 @@ Essas áreas vêm transformando o mundo atual, desde a forma como lidamos com gr
 
 ## 📂 Estrutura do Projeto
 
-📦 portfolio-raquel
+📦 meu-portfolio
 ┣ 📂 assets
 ┃ ┣ 📂 css
-┃ ┃ ┗ 📜 style.css
+┃ ┣ 📂 data
+┃ ┃ ┗ 📜 turma.json
 ┃ ┣ 📂 img
-┃ ┗ 📂 js
-┃ ┗ 📜 carrossel.js
-┣ 📜 index.html
-┣ 📜 formacao.html
+┃ ┃ ┣ 📷 carrossel_sobremim1.jpg
+┃ ┃ ┣ 📷 carrossel_sobremim2.png
+┃ ┃ ┗ 📷 carrossel_sobremim3.jpg
+┃ ┗ 📂 scripts
+┃ ┃ ┣ 📜 carrossel.js
+┃ ┃ ┗ 📜 turma.js
 ┣ 📜 atuacao.html
-┣ 📜 projetos.html
+┣ 📜 formacao.html
+┣ 📜 index.html
 ┣ 📜 pessoal.html
+┣ 📜 projetos.html
+┣ 📜 turma.html
 ┗ 📜 README.md
 
 📬 Contato
