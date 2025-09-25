@@ -6,7 +6,7 @@ Este repositório contém meu site pessoal, onde apresento minha trajetória, in
 
 🔗 **Acesse aqui:** [raquelmota.github.io/meu-portfolio](https://raquelmota.github.io/meu-portfolio)
 
-## 👩‍💻 Sobre Mim
+## 👩🏽‍💻 Sobre Mim
 Meu nome é **Raquel de Jesus Mota**, tenho 27 anos e sou natural de **Uberaba, MG**.  
 Atualmente, estou cursando **Tecnologia em Análise e Desenvolvimento de Sistemas** no  
 **Instituto Federal do Triângulo Mineiro – Campus Uberaba Parque Tecnológico (UPT)**.
